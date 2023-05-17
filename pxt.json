@@ -1,10 +1,12 @@
 {
-    "name": "mp3-1-Titel",
+    "name": "Diorama_V1",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8"
+        "pxt-serialmp3": "github:mkleinsb/pxt-serialmp3#v0.0.8",
+        "pxt-mpr121": "github:hdruoff/pxt-mpr121_hdruoff#f4499728314eee6e48c2162a9fb1afaa5c497183",
+        "neopixel": "github:Microsoft/pxt-neopixel#v0.7.5"
     },
     "files": [
         "main.blocks",
@@ -18,7 +20,7 @@
         "branch": "v3.0.33",
         "tag": "v3.0.33",
         "commits": "https://github.com/microsoft/pxt-calliope/commits/3742cc45f2721da346c8f20d3634ddd20487fcf9",
-        "target": "4.0.29",
+        "target": "4.0.30",
         "pxt": "6.0.23",
         "targetId": "calliopemini"
     },
