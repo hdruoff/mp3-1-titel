@@ -1,5 +1,5 @@
 {
-    "name": "Diorama_V1",
+    "name": "Diorama_V2.0",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -20,12 +20,29 @@
         "branch": "v3.0.33",
         "tag": "v3.0.33",
         "commits": "https://github.com/microsoft/pxt-calliope/commits/3742cc45f2721da346c8f20d3634ddd20487fcf9",
-        "target": "4.0.30",
+        "target": "4.0.29",
         "pxt": "6.0.23",
         "targetId": "calliopemini"
     },
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "blocksprj",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "pairing_mode": 1,
+                    "partial_flashing": 1,
+                    "dfu_service": 1,
+                    "event_service": 1,
+                    "device_info_service": 1
+                },
+                "stack_size": 2048,
+                "gatt_table_size": "0x800",
+                "sram_end": "0x20008000",
+                "RAM_SIZE": "\"32K\""
+            }
+        }
+    }
 }
