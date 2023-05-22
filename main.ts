@@ -1,7 +1,6 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    if (list.length > 0) {
-        let items: number[] = []
-        randomIndex = randint(0, list.length - 1)
+    if (items.length > 6) {
+        randomIndex = randint(0, items.length - 1)
         item = items[randomIndex]
         items[randomIndex] = items[items.length] - 1
         items.pop()
@@ -15,9 +14,9 @@ function Disko () {
     strip.show()
     basic.pause(100)
 }
-let item = 0
+let item: Arr = null
 let randomIndex = 0
-let list: number[] = []
+let items: number[] = []
 let strip: neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P1, 8, NeoPixelMode.RGB_RGB)
 strip.setBrightness(100)
@@ -31,15 +30,13 @@ strip.setPixelColor(6, neopixel.colors(NeoPixelColors.Blue))
 strip.setPixelColor(7, neopixel.colors(NeoPixelColors.White))
 strip.show()
 let Anzahl_Klicks = 0
-list = [
-0,
+items = [
 1,
 2,
 3,
 4,
 5,
-6,
-7
+6
 ]
 basic.forever(function () {
     strip.clear()
