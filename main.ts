@@ -1,5 +1,5 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    if (items.length > 6) {
+    if (items.length > 0) {
         randomIndex = randint(0, items.length - 1)
         item = items[randomIndex]
         items[randomIndex] = items[items.length - 1]
@@ -22,7 +22,6 @@ input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
         strip.show()
     } else if (item == 5) {
         strip.setPixelColor(6, neopixel.colors(NeoPixelColors.Purple))
-        strip.show()
     } else if (item == 6) {
         strip.setPixelColor(7, neopixel.colors(NeoPixelColors.Purple))
         strip.show()
@@ -58,7 +57,16 @@ basic.showString("Starten")
 basic.pause(1000)
 strip.clear()
 basic.forever(function () {
-    if (true) {
-    	
+    if (items.length > 0) {
+        if (item == 1 && mpr121.isTouched(TouchSensor.T0)) {
+            strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+            strip.show()
+        } else if (item == 2 && mpr121.isTouched(TouchSensor.T1)) {
+            strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+            strip.show()
+        }
+    } else {
+        strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+        strip.show()
     }
 })
