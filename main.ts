@@ -1,5 +1,5 @@
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
-    if (items.length > 0) {
+    if (items.length > 6) {
         randomIndex = randint(0, items.length - 1)
         item = items[randomIndex]
         items[randomIndex] = items[items.length - 1]
@@ -58,5 +58,7 @@ basic.showString("Starten")
 basic.pause(1000)
 strip.clear()
 basic.forever(function () {
-	
+    if (true) {
+    	
+    }
 })
